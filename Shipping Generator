@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html> 
+    <body>
+        <div id="div1">
+        <h1>💞Shipping Scenario Generator💞</h1>
+        <h6>Created by <a href="https://instagram.com/grazgrain" style="color: silver;">grazgrain</a></h6>
+        <input type="text" id="A" placeholder="Person A"></input>
+        <br>
+        <input type="text" id="B" placeholder="Person B"></input>
+        <br>
+        <br>
+        <button id="generator" onclick="generate()">Generate!</button>
+        </div>
+        <div id="div2"><p id='generatedText'></p></div>
+       
+        
+    </body> 
+
+    <script>
+            let personA = ""; 
+            let personB = ""; 
+    document
+        .getElementById("A")
+        .addEventListener('input', (event) => {
+            personA = event.target.value;
+        });
+
+    document
+        .getElementById("B")
+        .addEventListener('input', (event) => {
+            personB = event.target.value;
+        });
+
+        
+        function generate(){
+            const scenarios = [
+            `${personA} and ${personB} in the Wild West. ${personA} is an outlaw while ${personB} is a sheriff.`, 
+            `${personA} asks ${personB} if they would still love them if they were a worm. If you want to take it a step further, have ${personA} actually turn into a worm.`, 
+            `${personA} and ${personB}'s third wheel describes the couple's relationship.`,
+            `${personA} and ${personB} have to babysit and have to figure out how to take care of a child. Chaos ensues.`, 
+            `${personA} and ${personB} are at this point just friends. ${personB} is playing spin the bottle and it keeps landing on ${personA}.`, 
+            `${personA} falls into ${personB}'s arms while rollerskating.`,
+            `${personA} is a barista and ${personB} is their customer. They both have crushes on each other but neither know how to confess their love.`,
+            `${personB} is a celebrity and ${personA} is a big fan of them. One day, they meet each other, and one thing leads to another and they start dating. Drama and gossip ensues.`,
+            `If ${personA} and ${personB} ruled a country, what would it be like?`,
+            `${personA} and ${personB}'s first kiss.`,
+            `${personA} and ${personB} are just like that couple from Titanic (only no one dies). Oh my god you guys!`,
+            `${personA} and ${personB} make playlists for each other.`,
+            `${personA} and ${personB} are about to get married, when suddenly another character yells "I object!"`,
+            `${personA} and ${personB} very awkwardly meet each other's parents.`, 
+            `${personA} and ${personB} troll people online together. It goes very wrong.`,
+            `${personA} and ${personB} get in one of those weird slapstick fights Tom and Jerry type fights where there's pianos falling from the sky and stuff.`,
+            `${personA} and ${personB} cry to each other both for completely different reasons and try to comfort the other but can't because they're crying and sniffling so much.`,
+            `A true crime documentary about ${personA} and ${personB}, partners in crime`,
+            `${personA} and ${personB} get lost in New York City together and don't find their friends until the end of the story.`,
+            `${personA} and ${personB} switch bodies like in Freaky Friday.`,
+            `${personA} was a punk, ${personB} did ballet. What more can I say?`,
+            `Scott Pilgrim AU where ${personA} is Scott and ${personB} is Ramona. Who are ${personB}'s seven evil exes?`
+        ];
+            let genScen = scenarios[Math.floor(Math.random() * scenarios.length)]; 
+            document.getElementById('generatedText').innerHTML = genScen; 
+
+            if (personB == "" || personA == "") {
+                document.getElementById('generatedText').innerHTML = "Please enter both names before generating!"; 
+            }
+        }
+        </script>
+
+    <style>
+        h1 {
+            color: white;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        #div1 {
+            margin: auto; 
+            align-self: center;
+            margin-top: 300px; 
+        }
+
+        #div2 {
+            margin: auto; 
+            align-self: center;
+            margin-top: 40px; 
+            margin-bottom: 5px; 
+            width: 400px; 
+            color: white; 
+
+        }
+
+        button {
+            background-color: crimson; 
+            color: white; 
+            font-size: 20px;
+            width: 120px; 
+            height: 40px;
+            border-color: silver; 
+            border-radius: 5px;
+            border-width: 2px;  
+            margin-top: 15px;
+        }
+
+        h6 {
+            margin-top: 5px;
+            color: crimson; 
+            font-size: 15px; 
+        }
+
+        input {
+            border-color: silver; 
+            border-radius: 5px;
+            border-width: 2px;  
+            height: 30px; 
+        }
+        html {
+            text-align: center;
+            background-color: lightcoral; 
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+        }
+    </style>
+</html>
