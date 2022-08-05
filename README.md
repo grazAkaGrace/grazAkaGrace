@@ -1,7 +1,7 @@
 - 👋 Hi, I’m @grazAkaGrace
-- 👀 I’m interested in mobile app development
-- 🌱 I’m currently learning Java
-- 💞️ I'm currently on the Greece Gladiators Robotics Team
+- 👀 I’m interested in software engineering
+- 🌱 I’m currently learning web development and Javascript
+- 💞️ I'm on the Greece Gladiators Robotics Team
 
 <!---
 - 📫 How to reach me
